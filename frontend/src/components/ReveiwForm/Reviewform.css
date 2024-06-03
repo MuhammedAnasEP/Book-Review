@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .book-details {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-cover {
+    width: 40%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .book-cover {
+      width: 100%;
+    }
+    
+    .info {
+      width: 100%;
+    }
+  }
+  
+  .info {
+    width: 60%;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  .author,
+  .description {
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    line-height: 1.5;
+  }
+  
+  .reviews {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .reviews li {
+    margin-bottom: 10px;
+  }
+  
+  .rating {
+    color: gold;
+  }
+  
+  .add-review {
+    background-color: #333;
+
+  }
+
+  .add-review {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .add-review:hover {
+    background-color: #222;
+  }
