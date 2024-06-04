@@ -1,8 +1,0 @@
-export const baseUrl = 'http://127.0.0.1:8000/api/'
-export const backend = 'http://127.0.0.1:8000'
-export const login = 'token/'
-export const bookList = 'books/'
-export const bookDetails = 'books/'
-export const search = 'search/'
-export const createReview = 'create-review/'
-export const reviewList = 'review-list/'
