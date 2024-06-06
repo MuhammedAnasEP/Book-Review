@@ -85,19 +85,21 @@ function RegisterPage() {
           setLoading(false)
           
           if (err.code === 'ERR_NETWORK') {
-            setError('Network error')
+            setError('Network error. Please check after some time.')
           }
 
-          else if (err.response.data.username) {
-            setError(err.response.data.username)
-          }
-
-          else if (err.response.data.email) {
-            setError(err.response.data.email)
-          }
-
-          else if (err.response.data.password) {
-            setError(err.response.data.password)
+          else if (err.response.status === 400) {
+            if (err.response.data.username) {
+              setError(err.response.data.username)
+            }
+  
+            if (err.response.data.email) {
+              setError(err.response.data.email)
+            }
+  
+            if (err.response.data.password) {
+              setError(err.response.data.password)
+            }
           }
         })
       }
