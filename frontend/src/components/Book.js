@@ -5,7 +5,6 @@ import Rating from './Rating'
 
 
 function Book({ book }) {
-    console.log(book)
   return (
         <Card className='m-3 px-3 pt-2 rounded'>
             <Link to={`/book/${book.id}`}>

@@ -34,7 +34,7 @@ class BookListAndCreateView(ListCreateAPIView):
 
 
 class BookDetailsView(APIView):
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get(self, request, id):
         """
         Retrieves the details of a book with the specified ID. If not found, it returns a 404 error.

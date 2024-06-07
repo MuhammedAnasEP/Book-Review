@@ -22,30 +22,27 @@ function BookPage() {
         getBook(params.id)
         getBookReview(params.id)
     }, [])
-
     
     const getBook = (id) => {
-        axios.get(`book/${id}`)
-            .then((respone)=>{
-                setBook(respone.data)
-                console.log(respone.data)
-            })
-            .catch((error) => {
-                // Handle error if necessary
-                console.error(error);
-            });
-
+      setLoading(true);
+      axios.get(`book/${id}`)
+          .then((respone)=>{
+              setBook(respone.data)
+              setLoading(false);
+          })
+          .catch((error) => {
+              setError(error.respone.detail);
+              setLoading(false);
+          });
     }
 
     const getBookReview = (id) => {
         axios.get(`review/${id}`)
             .then((respone)=>{
                 setReview(respone.data.results)
-                console.log(respone.data.results,"------------------------")
             })
             .catch((error) => {
-                // Handle error if necessary
-                console.error(error);
+                setError(error.respone.detail);
             });
             
         }
